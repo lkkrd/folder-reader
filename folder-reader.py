@@ -18,7 +18,11 @@ countSzkolenia = len(szkolenia)
 
 for i in range (0, countSzkolenia - 1):
     path = "C:/Users/Admin/Opolska eSzkola/Szkolenia2020 - Dokumentacja szkoleń EKSPERT 2022/" + szkolenia[i]
-    print(path)
-    print(os.listdir(path))
-    print(len(os.listdir(path)))
-
+    #print(path)
+    #print(os.listdir(path))
+    #print(len(os.listdir(path)))
+    if len(os.listdir(path)) != 3:
+        numer = szkolenia[i]
+        bledneSzkolenia.append(numer[0:4])
+print('szkolenia, które nie mają 3 plików: ')
+print(bledneSzkolenia)
